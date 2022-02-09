@@ -1,4 +1,4 @@
-# **Router**
+# Router
 
 ## **Angular 路由**
 
@@ -7,7 +7,8 @@
 ```tsx
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module'; // CLI imports AppRoutingModule
+import { AppRoutingModule } from './app-routing.module'; 
+// CLI imports AppRoutingModule
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -58,9 +59,9 @@ const routes: Routes = [
 ### template 寫法
 
 ```tsx
-<a [routerLink]="['products']" [queryParams]="{ id: 101 }">Prodcuts</a> // template 寫法
-<a routerLink="products" [queryParams]="{ id: 101 }">Prodcuts</a> // template 寫法
-<a [routerLink]="['market','GP11011']">Prodcuts</a> // template 寫法
+<a [routerLink]="['products']" [queryParams]="{ id: 101 }">Prodcuts</a>
+<a routerLink="products" [queryParams]="{ id: 101 }">Prodcuts</a>
+<a [routerLink]="['market','GP11011']">Prodcuts</a>
 ```
 
 ### 用 function 轉跳網址
