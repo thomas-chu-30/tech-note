@@ -1,19 +1,14 @@
-# Angular
+# **Guides**
 
-[@angular/router](https://docs.w3cub.com/angular/api/router)
+> 開發時常用的參考資料
+>
+> [強大的文件資料](https://docs.w3cub.com/angular/api/router)
+>
+> [可查詢 Google Fonts](https://fonts.google.com/icons?selected=Material+Icons)
+>
+> [Angular api](https://angular.io/api)
 
-mat icon search web 
-
-[Google Fonts](https://fonts.google.com/icons?selected=Material+Icons)
-
-[Angular](https://angular.io/api)
-
-<aside>
-🔹 此連結為 angular api 的查尋連結
-
-</aside>
-
-### 常用 command line 大全
+## 常用 command line 大全
 
 > 可參考 CLI 命令參考手冊，下列為 generate component 的 command
 > 
@@ -37,9 +32,15 @@ $ ng g enum my-new-enum => 枚舉
 $ ng g module my-module => 模塊
 ```
 
-[Angular - ng generate](https://angular.tw/cli/generate#component)
 
-[Angular CLI 常用终端操作命令](https://www.jianshu.com/p/67acdd21f89c)
+
+## 建立一 angular 專案
+
+```shell
+$ ng new angular-tour-of-heroes
+```
+
+
 
 angular 入門到實踐
 
@@ -269,3 +270,10 @@ export class LoginGuard implements CanActivate {
 [**ng2-file-upload**](https://www.notion.so/ng2-file-upload-034cf6a5408846ca801cd43b1ecedea8)
 
 [Element](https://www.notion.so/Element-cf0bb4f09ac742faa4398a4f81f7ba5d)
+~~~~
+
+## 參考文章
+
+[Angular - ng generate](https://angular.tw/cli/generate#component)
+
+[Angular CLI 常用终端操作命令](https://www.jianshu.com/p/67acdd21f89c)
