@@ -1,6 +1,6 @@
 # Customized Pipe
 
-working 
+下列所遇到的情境是 url 的 queryString 重複的情況，所造成的 bug ，所以希望在 subscribed 的 pipe 把 queryString 展平。
 
 ```javascript
 export function flattenQueryParams() {
@@ -30,6 +30,7 @@ export function flattenQueryParams() {
 }
 ```
 
+這樣子就可以直接套用到 pipe 中，使用自己寫的 function 去作 filter 的功能
 ```javascript
 this.route.queryParams.pipe(flattenQueryParams()).subscribe((res) => {
 		this.currentPage = parseInt(res.page) || 1;

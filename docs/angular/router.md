@@ -239,6 +239,21 @@ this.router.events.subscribe((ev) => {
 
 
 
+## 在 parent 要拿到本頁的 component 
+
+情境說明，在 header 因為要透過頁面 router 的 data 來判斷資料顯示。但在此處的 route 是直向最外面的 `app.component` ，但真正想要拿到的東西是在 firstChild 裡面，所以透過 `while` 來取得最後一個 component 
+
+```js
+let current = this.route.firstChild;
+		while (current.firstChild) {
+		current = current.firstChild;
+}
+```
+
+> [ 注意 ] 如果是 lazy page 的話，中間會有一層 `component` 為 undefine
+
+
+
 ## 參考文章
 
 [Angular Router Tutorial](https://www.codingame.com/playgrounds/8104/angular-router-tutorial)
