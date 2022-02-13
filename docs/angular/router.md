@@ -218,7 +218,11 @@ export class UserRoutingModule { }
 
 
 
-## (重要)如果你重複使用 component 的話
+## 你可能會遇到的問題
+
+------
+
+### *如果你重複使用 component 的話
 
 觸發 events 的 subscribe 會經過很多的 event 
 
@@ -226,7 +230,7 @@ export class UserRoutingModule { }
 
 [Angular框架中去监听路由的改变（Router中的events: Observable ）](https://www.jianshu.com/p/de4479ce5b19)
 
-```jsx
+```js
 this.router.events.subscribe((ev) => {  
 		// ev 是在 event 的觸發時會跑過很多的 event  
 		// 這個 if 是在判斷如果 event 是 ActivationStart 的時候
@@ -236,6 +240,24 @@ this.router.events.subscribe((ev) => {
     }
 });
 ```
+
+
+------
+
+### 在 parent 要拿到本頁的 component 
+
+情境說明，在 header 因為要透過頁面 router 的 data 來判斷資料顯示。但在此處的 route 是直向最外面的 `app.component` ，但真正想要拿到的東西是在 firstChild 裡面，所以透過 `while` 來取得最後一個 component 
+
+```js
+let current = this.route.firstChild;
+		while (current.firstChild) {
+		current = current.firstChild;
+}
+```
+
+> [ 注意 ] 如果是 lazy page 的話，中間會有一層 `component` 為 undefine
+
+------
 
 
 
