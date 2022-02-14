@@ -1,3 +1,6 @@
+---
+sidebar_position: 1
+---
 # Guides
 
 > 開發時常用的參考資料
@@ -13,9 +16,10 @@
 > 可參考 CLI 命令參考手冊，下列為 generate component 的 command
 > 
 
-```jsx
-$ ng g component home/component/my-new-component     
+```bash
+$ ng g component home/component/my-new-component
 # => 组件 | 相對生成組件生成位置在項目的根目錄的  src/app/home/component（指令其他等等都可以用該方式生成）
+# ng g component my-component | home/component/my-new-component
 
 $ ng g directive my-new-directive =>  指令 
     

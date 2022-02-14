@@ -39,3 +39,8 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+------
+
+[簡單了解一下 slider order 問題](https://www.wkhomeland.com/docs/docusaorus%E4%BD%BF%E7%94%A8/docusaurus%E6%96%87%E6%A1%A3%E6%8E%92%E5%88%97%E9%A1%BA%E5%BA%8F07-07)
+

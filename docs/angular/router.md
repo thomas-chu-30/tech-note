@@ -218,6 +218,35 @@ export class UserRoutingModule { }
 
 
 
+## directive router
+
+### [RouterLink](https://angular.io/api/router/RouterLink)
+
+### [RouterLinkActive](https://angular.io/api/router/RouterLinkActive)
+
+routerLinkActive則是用來設定若現在的網址與所設定的連結一致時，要加上去的Class名稱，也可以利用來判斷顯示的邏輯
+
+```js
+<a
+    routerLink="/market/categories/note"
+    #rla="routerLinkActive"
+    routerLinkActive="active"
+>
+		{{ rla.isActive ? 'isActive' : 'noActive' }} note
+</a>
+<a routerLink="/market/categories/book">book</a>
+```
+
+### [RouterLinkWithHref](https://angular.io/api/router/RouterLinkWithHref)
+
+### [RouterOutlet](https://angular.io/api/router/RouterOutlet)
+
+
+
+
+
+
+
 ## 你可能會遇到的問題
 
 ------
@@ -263,6 +292,8 @@ let current = this.route.firstChild;
 
 ## 參考文章
 
+[**Router基礎介紹**](https://ithelp.ithome.com.tw/articles/10195346)
+
 [Angular Router Tutorial](https://www.codingame.com/playgrounds/8104/angular-router-tutorial)
 
 [Angular 使用Router Parameters 路由參數](https://matthung0807.blogspot.com/2019/06/angular-7-router-parameters.html)
@@ -273,4 +304,8 @@ let current = this.route.firstChild;
 [Angular 从入坑到挖坑 - 路由守卫连连看](https://www.cnblogs.com/danvic712/p/getting-started-with-angular-route-guards.html)
 
 [詳解Angular中的路由守衛](https://tw511.com/a/01/26032.html)
+
+
+
+
 
