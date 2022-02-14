@@ -280,7 +280,7 @@ git clean -fd
 把沒有追宗的檔案 delete 
 ```
 
-# 參考文章
+## 參考文章
 
 [搬移檔案](https://zlargon.gitbooks.io/git-tutorial/content/file/move.html)
 
