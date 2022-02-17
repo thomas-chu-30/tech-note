@@ -276,6 +276,21 @@ export class LoginGuard implements CanActivate {
 [Element](https://www.notion.so/Element-cf0bb4f09ac742faa4398a4f81f7ba5d)
 ~~~~
 
+
+
+## vscode 建議安裝套件
+
+名稱: Angular Files
+識別碼: alexiv.vscode-angular2-files
+描述: Quickly scaffold angular file templates
+版本: 1.6.4
+發行者: Alexander Ivanichev
+VS Marketplace 連結: https://marketplace.visualstudio.com/items?itemName=alexiv.vscode-angular2-files
+
+> 可以直接在 files 上面直接建立 component, servicer, guarde, 等等
+
+
+
 ## 參考文章
 
 [Angular - ng generate](https://angular.tw/cli/generate#component)

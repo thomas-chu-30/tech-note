@@ -193,7 +193,15 @@ Angular 其實提供了三種註冊 Service 的方式。
 })
 ```
 
-## 
+
+
+這個要常常看一下，重要
+
+https://blog.kevinyang.net/2018/01/19/angular-viewproviders-providers/
+
+
+
+
 
 ## 參考文章
 
