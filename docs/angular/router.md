@@ -56,13 +56,31 @@ const routes: Routes = [
 
 ## 轉址
 
+### HTML5 URLs and the `<base href>`
+
+The guidelines that follow will refer to different parts of a URL. This diagram outlines what those parts refer to:
+
+```
+foo://example.com:8042/over/there?name=ferret#nose
+\_/   \______________/\_________/ \_________/ \__/
+ |           |            |            |        |
+scheme    authority      path        query   fragment
+```
+
+
+
 ### template 寫法
 
-```tsx
+```html
 <a [routerLink]="['products']" [queryParams]="{ id: 101 }">Prodcuts</a>
 <a routerLink="products" [queryParams]="{ id: 101 }">Prodcuts</a>
 <a [routerLink]="['market','GP11011']">Prodcuts</a>
+
+<!-- hash url: router_name#fragment_name -->
+<a [routerLink]="['router_name']" fragment="fragment_name">
 ```
+
+
 
 ### 用 function 轉跳網址
 
@@ -87,6 +105,9 @@ this.router.navigate(['group', { id:7 }]);
 
 // group?id=7
 this.router.navigate(['group'], { queryParams: { id: 7 } });
+
+// group#prodID
+this.router.navigate(['group'], { fragment: prodID });
 ```
 
 [Angular Router 教學 - Wayne's Talk](https://waynestalk.com/angular-router-tutorial/)
