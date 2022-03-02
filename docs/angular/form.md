@@ -42,7 +42,7 @@
 
 ## invalid function
 
-[](https://www.tektutorialshub.com/angular/angular-formbuilder-in-reactive-forms/)
+[https://www.tektutorialshub.com/angular/angular-formbuilder-in-reactive-forms/](https://www.tektutorialshub.com/angular/angular-formbuilder-in-reactive-forms/)
 
 ## FormGroup
 
@@ -108,7 +108,7 @@ this.fromName.updateValueAndValidity();
 
 [Angular reactive forms set and clear validators](https://stackoverflow.com/questions/51300628/angular-reactive-forms-set-and-clear-validators)
 
-[](https://www.tektutorialshub.com/angular/how-to-add-validators-dynamically-using-setvalidators-in-angular/)
+[https://www.tektutorialshub.com/angular/how-to-add-validators-dynamically-using-setvalidators-in-angular/](https://www.tektutorialshub.com/angular/how-to-add-validators-dynamically-using-setvalidators-in-angular/)
 
 ```jsx
 private destroy$: ReplaySubject<boolean> = new ReplaySubject(1);
@@ -131,7 +131,7 @@ const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 ## ValueChange
 
-[](https://www.tektutorialshub.com/angular/valuechanges-in-angular-forms/)
+[value change](https://www.tektutorialshub.com/angular/valuechanges-in-angular-forms/)
 
 ## Custom Async Validators
 
