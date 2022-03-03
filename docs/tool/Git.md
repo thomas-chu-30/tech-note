@@ -264,13 +264,34 @@ git tag -n #  可以顯示出標籤和註解
 
 ## Git Bisect
 
-> 希望你一輩子都不要用到這個東西。
-> 
+> 希望你一輩子都不要用到這個東西 ~~ bisect 是透過二分法，來得知那一個 commit 出了問題，如下列的 gif 說明
+
+![](https://blog.puckwang.com/images/2021/Git-Bisect-Demo.gif)
+
+**大略操作步驟**
+
+1. 執行開始。
+2. 標記一個好的 Commit 與一個壞的 Commit。
+3. 標記 Git 自動切換的 Commit 是好的或壞的。
+4. 成功找到第一個有問題的 Commit。
+
+參考下列 commend 抓出錯誤的 commit 在那裡
 
 ```shell
-git bisect start [BAD_COMMIT] [GOOD_COMMIT]
-# 開始後將自動 checkout 到要檢查的 commit
+git bisect start
+git bisect start [BAD_COMMIT] [GOOD_COMMIT] # 開始後將自動 checkout 到要檢查的 commit
+
 # 請執行以下指令標記正常 or 錯誤
+git bisect good # 告訴 git 目前現在是好的
+git bisect good [GOOD_COMMIT]
+git bisect bad #告訴 git 目前是壞的
+git bisect bad [BAD_COMMIT]
+
+# 可搭配其它的指令
+git bisect skip # 跳過目前版本
+git bisect reset a15fd5c # 重置 a15fd5c 標記 
+git bisect log # 查看操作記錄
+git bisect visualize # 視覺化檢視 
 ```
 
 [參考文章](https://www.gss.com.tw/blog/%E4%BD%BF%E7%94%A8-git-bisect-%E5%BF%AB%E9%80%9F%E6%89%BE%E5%88%B0%E7%AC%AC%E4%B8%80%E5%80%8B%E6%9C%89%E5%95%8F%E9%A1%8C%E7%9A%84-commit)
