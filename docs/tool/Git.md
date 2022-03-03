@@ -288,7 +288,10 @@ git bisect bad #告訴 git 目前是壞的
 git bisect bad [BAD_COMMIT]
 
 # 可搭配其它的指令
+git bisect [help|start|bad|good|new|old|terms|skip|next|reset|visualize|view|replay|log|run]
+
 git bisect skip # 跳過目前版本
+git bisect reset # 停止搜尋 
 git bisect reset a15fd5c # 重置 a15fd5c 標記 
 git bisect log # 查看操作記錄
 git bisect visualize # 視覺化檢視 
