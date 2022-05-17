@@ -1,28 +1,28 @@
 # Directive
 
-## Commom  (11)
+## Commom (11)
 
 ## class style bind
 
 ```html
 <!-- Native Class and Style Attributes -->
-<input class="is-danger my-button" style="border: none; color: blue">
+<input class="is-danger my-button" style="border: none; color: blue" />
 
 <!-- Angular class and style Bindings -->
-<input [class.is-danger]="booleanProp" [style.border]="borderProp">
+<input [class.is-danger]="booleanProp" [style.border]="borderProp" />
 
 <!-- ngClass -->
-<input [ngClass]="{'is-danger': booleanProp, 'myButton': true}">
-<input [ngClass]="isDangerButton">
+<input [ngClass]="{'is-danger': booleanProp, 'myButton': true}" />
+<input [ngClass]="isDangerButton" />
 
 <!-- ngStyle -->
-<input [ngStyle]="{'border': borderProp, 'color': colorProp}">
-<input [ngStyle]="hasColorBorder">
+<input [ngStyle]="{'border': borderProp, 'color': colorProp}" />
+<input [ngStyle]="hasColorBorder" />
 ```
 
-[精通Angular之NgClass和NgStyle](https://zhuanlan.zhihu.com/p/95490706)
+[精通 Angular 之 NgClass 和 NgStyle](https://zhuanlan.zhihu.com/p/95490706)
 
-[angularJs中关于ng-class的三种使用方式说明](https://segmentfault.com/a/1190000008393758)
+[angularJs 中关于 ng-class 的三种使用方式说明](https://segmentfault.com/a/1190000008393758)
 
 [Angular - Attribute 繫結、類別繫結和樣式繫結](https://angular.tw/guide/attribute-binding)
 
@@ -33,18 +33,18 @@
   let item of items;
   let idx = index;
   let first = first;
-  let last = last; 
-  let even = even; 
+  let last = last;
+  let even = even;
   let odd = odd"
 ```
 
-使用NgFor時，我們可以同時搭配使用五個不同的變數，分別是：
+使用 NgFor 時，我們可以同時搭配使用五個不同的變數，分別是：
 
-- index：整數值；代表目前資料在陣列中的 index
-- first：布林值；代表目前資料是否為 第一筆
-- last：布林值；代表目前資料是否為 最後一筆
-- even：布林值；代表目前資料的index是否為 第偶數筆
-- odd：布林值；代表目前資料的index是否為 第奇數筆
+-   index：整數值；代表目前資料在陣列中的 index
+-   first：布林值；代表目前資料是否為 第一筆
+-   last：布林值；代表目前資料是否為 最後一筆
+-   even：布林值；代表目前資料的 index 是否為 第偶數筆
+-   odd：布林值；代表目前資料的 index 是否為 第奇數筆
 
 [全端開發人員天梯](https://dotblogs.com.tw/wellwind/2017/01/01/angular2-ngfor-vars)
 
@@ -58,8 +58,7 @@
 
 ## [(ngModel)]
 
-> 一定要引用 `import { FormsModule } from '@angular/forms';`
-> `imports: [FormsModule]`
+> 一定要引用 `import { FormsModule } from '@angular/forms';` > `imports: [FormsModule]`
 > 不然會沒有辦法使用
 
 [[Angular 深入淺出三十天] Day 09 - Angular 小學堂（二） - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10205162)
@@ -74,9 +73,9 @@
 
 ```html
 <some-element [ngPlural]="value">
-  <ng-template ngPluralCase="=0">there is nothing</ng-template>
-  <ng-template ngPluralCase="=1">there is one</ng-template>
-  <ng-template ngPluralCase="few">there are a few</ng-template>
+    <ng-template ngPluralCase="=0">there is nothing</ng-template>
+    <ng-template ngPluralCase="=1">there is one</ng-template>
+    <ng-template ngPluralCase="few">there are a few</ng-template>
 </some-element>
 ```
 
@@ -104,17 +103,13 @@
 
 ## Router (4)
 
-[參考 router page](/docs/angular/router)
+[參考 router page](/docs/Angular-Framework/router)
 
 [angular api](https://angular.io/api?type=directive)
 
-
-
 ## upgrade/static (1)
 
-
-
-------
+---
 
 ## Other
 
@@ -128,7 +123,7 @@
 
 ```js
 export class sample Component implements OnInit {
-   imageSrc = 'assets/images/iphone.png'  
+   imageSrc = 'assets/images/iphone.png'
    imageAlt = 'iPhone'
 }
 ```
