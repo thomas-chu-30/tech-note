@@ -54,6 +54,25 @@ How do I restrict an input to only accept numbers?
 
 [How do I restrict an input to only accept numbers?](https://stackoverflow.com/questions/14615236/how-do-i-restrict-an-input-to-only-accept-numbers)
 
+### Nested FormGroup
+
+```jsx
+this.contactForm = this.formBuilder.group({
+  firstname: ['', [Validators.required, Validators.minLength(10)]],
+  lastname: ['', [Validators.required, Validators.maxLength(15), Validators.pattern("^[a-zA-Z]+$")]],
+  email: ['', [Validators.required, Validators.email]],
+  gender: ['', [Validators.required]],
+  isMarried: ['', [Validators.required]],
+  country: ['', [Validators.required]],
+  address: this.formBuilder.group({
+    city: ['', [Validators.required]],
+    street: ['', [Validators.required]],
+    pincode: ['', [Validators.required]],
+  })
+});
+
+```
+
 ## Validations
 
 [Angular](https://angular.io/api/forms/Validators#compose)
@@ -74,28 +93,10 @@ class Validators {
 }
 ```
 
-### Nested FormGroup
-
-```jsx
-this.contactForm = this.formBuilder.group({
-  firstname: ['', [Validators.required, Validators.minLength(10)]],
-  lastname: ['', [Validators.required, Validators.maxLength(15), Validators.pattern("^[a-zA-Z]+$")]],
-  email: ['', [Validators.required, Validators.email]],
-  gender: ['', [Validators.required]],
-  isMarried: ['', [Validators.required]],
-  country: ['', [Validators.required]],
-  address: this.formBuilder.group({
-    city: ['', [Validators.required]],
-    street: ['', [Validators.required]],
-    pincode: ['', [Validators.required]],
-  })
-});
-
-```
 
 ### updateValidations
 
-```jsx
+```javascript
 this.fromName.get("formControlName").setValidators([Validators.required]);
 //setting validations
 this.fromName.get("formControlName").setErrors({'required':true});
@@ -116,18 +117,52 @@ private destroy$: ReplaySubject<boolean> = new ReplaySubject(1);
 
 ### hasError
 
-```js
-<mat-error *ngIf="inviteeEmailItem.hasError('required')">
-		<span>Please enter email.</span>
+在操作 js 的時候，需要有一個特定的 error style 可以用 `setErrors` 來設定 `boolean` 讓 `template` 來使用
+
+```javascript
+this.productsForm[index].controls['unit_price'].setErrors({ bottomPrice: true });
+```
+
+```html
+<mat-error *ngIf="productsForm[index].get('unit_price').hasError('bottomPrice')">
+		<span>Please enter bottomPrice.</span>
 </mat-error>
 ```
 
-```js
+清楚不需要 error style 可以把此方法，我原本設用的 error 移除
+
+```javascript
+this.addProductForm.controls['part_no'].setErrors(null);
+```
+
+```javascript
 note 
 const pattern = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}/;
 // REF: https://www.w3resource.com/javascript/form/email-validation.php
 const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 ```
+
+## Reset Reactive Form
+
+```html
+<form [formGroup]="addProductForm" (ngSubmit)="addProduct()" #formDirective="ngForm">
+	...
+</form>
+```
+
+```javascript
+export class CorporateQuotationPageComponent implements OnInit {
+   @ViewChild('formDirective') formDirective;
+	 ...
+   resetForm() {
+  		this.formDirective.resetForm(); //重新的把值清空
+   }
+}
+```
+
+
+
+
 
 ## ValueChange
 
@@ -135,7 +170,7 @@ const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 ## Custom Async Validators
 
-```jsx
+```javascript
 import { Injectable } from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, ValidationErrors} from '@angular/forms';
 import {Observable, of} from 'rxjs';
@@ -153,7 +188,9 @@ export class ZipcodeService {
 }
 ```
 
-```jsx
+
+
+```javascript
 import {ZipcodeService} from './zipcode.service';
 import {AbstractControl, AsyncValidatorFn, ValidationErrors} from '@angular/forms';
 import {Observable} from 'rxjs';
@@ -170,7 +207,7 @@ export class ZipcodeValidator {
 }
 ```
 
-```jsx
+```javascript
 import {Component, OnInit} from '@angular/core';
 import { FormControl, FormGroup, Validators} from '@angular/forms';
 import {ZipcodeService} from './zipcode.service';

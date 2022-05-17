@@ -1,5 +1,6 @@
+# NPM 你必需知道的事情
 
-# Npm install
+## package install
 
 一開始在使用 npm 管理安裝套件時，一定會對於這兩者很困惑：
 
@@ -29,6 +30,31 @@ npm install packagename --save-dev
 另外補充一點，如果發布之後仍然需要的套件，直接放在 *dependencies* 裏就行了，不需要同時間放在兩個地方，套用時會自動去調用 *dependencies* 地方的套件，功能不會受到影響。
 
 希望這篇文章可以讓你弄懂 npm install 一些套件相依的觀念。
+
+## **Package.json的版本控制**
+
+符號`~`、`^`所代表的意義
+
+[npmjs官方文件](https://docs.npmjs.com/files/package.json#dependencies)就已經有針對版本號有詳細的說明了
+
+```bash
+~version: Approximately equivalent to version
+^version: Compatible with version
+```
+
+`~`跟`^`最大差別就是鎖定的版本號位置**不得高於該版本號碼**
+
+`^`：鎖住**第一碼(即A)** 不得變更。如`^1.2.2`，則安裝範圍是`>=1.2.2` 且 `<2.0.0`。即須符合`1.*.*`。
+
+`~`：鎖住**第二碼(即B)** 不得變更。如`~1.2.2`，則安裝範圍是`>=1.2.2`且`<1.3.0`。即須符合`1.2.*`。
+
+ ## update 指定版本
+
+用`@`來指定版本號
+
+```shell
+npm install [package name]@[version]
+```
 
 
 
