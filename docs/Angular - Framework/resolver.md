@@ -8,7 +8,7 @@ ng generate resolver <folder/name> [options eg. --skip-tests]
 
 在 page 取得值
 
-```jsx
+```javascript
 this.route.data.subscribe((res) => {
      this.category = res.category.data;
 });
@@ -16,7 +16,7 @@ this.route.data.subscribe((res) => {
 
 router setting 
 
-```jsx
+```javascript
 {
         path: 'categories',
         component: ProductsPageComponent,
@@ -28,7 +28,7 @@ router setting
 
 Resolver 的檔案
 
-```jsx
+```javascript
 export class CategoryResolver implements Resolve<boolean> {
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
         // route 和 ActiveRoute 很像

@@ -247,7 +247,7 @@ export class UserRoutingModule { }
 
 routerLinkActive則是用來設定若現在的網址與所設定的連結一致時，要加上去的Class名稱，也可以利用來判斷顯示的邏輯
 
-```js
+```javascript
 <a
     routerLink="/market/categories/note"
     #rla="routerLinkActive"
@@ -280,7 +280,7 @@ routerLinkActive則是用來設定若現在的網址與所設定的連結一致�
 
 [Angular框架中去监听路由的改变（Router中的events: Observable ）](https://www.jianshu.com/p/de4479ce5b19)
 
-```js
+```javascript
 this.router.events.subscribe((ev) => {  
 		// ev 是在 event 的觸發時會跑過很多的 event  
 		// 這個 if 是在判斷如果 event 是 ActivationStart 的時候
@@ -298,7 +298,7 @@ this.router.events.subscribe((ev) => {
 
 情境說明，在 header 因為要透過頁面 router 的 data 來判斷資料顯示。但在此處的 route 是直向最外面的 `app.component` ，但真正想要拿到的東西是在 firstChild 裡面，所以透過 `while` 來取得最後一個 component 
 
-```js
+```javascript
 let current = this.route.firstChild;
 		while (current.firstChild) {
 		current = current.firstChild;

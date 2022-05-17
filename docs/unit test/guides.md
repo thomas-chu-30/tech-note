@@ -279,7 +279,20 @@ test("使用jest.spyOn()监控fetch.fetchPostsList被正常调用", async () => 
 >
 > 在實際項目的單元測試中，jest.fn()常被用來進行某些有回調函數的測試；jest.mock()可以 mock 整個模塊中的方法，當某個模塊已經被單元測試 100%覆蓋時，使用 jest.mock()去 mock 該模塊，節約測試時間和測試的冗餘度是十分必要；當需要測試某些必須被完整執行的方法時，常常需要使用 jest.spyOn()。這些都需要開發者根據實際的業務代碼靈活選擇。
 
+## run test 
+
+```bash
+npm jest 
+# 通常會寫在 package 中改為 run test
+npm test src/app/components 
+# 指定路徑，只測試一個 folder
+```
+
+
+
 ---
+
+
 
 ## 覺得神奇的部分
 
