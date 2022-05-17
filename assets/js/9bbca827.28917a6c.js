@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktech_note=self.webpackChunktech_note||[]).push([[8729],{1534:function(e){e.exports=JSON.parse('{"allTagsPath":"/tech-note/blog/tags","slug":"/tech-note/blog/tags/facebook","name":"facebook","count":1,"permalink":"/tech-note/blog/tags/facebook"}')}}]);
