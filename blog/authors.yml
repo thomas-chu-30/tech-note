@@ -1,17 +1,23 @@
 endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+    name: Endilie Yacop Sucipto
+    title: Maintainer of Docusaurus
+    url: https://github.com/endiliey
+    image_url: https://github.com/endiliey.png
 
 yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+    name: Yangshun Tay
+    title: Front End Engineer @ Facebook
+    url: https://github.com/yangshun
+    image_url: https://github.com/yangshun.png
 
 slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+    name: Sébastien Lorber
+    title: Docusaurus maintainer
+    url: https://sebastienlorber.com
+    image_url: https://github.com/slorber.png
+
+thomas-chu:
+    name: Thomas
+    title: techDesign front-end
+    url: https://www.facebook.com/profile.php?id=100000056080576
+    image_url: https://ik.imagekit.io/14v7jwku5tz/Blogger/avatar_ZCRJeWSMWK.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1652863363182

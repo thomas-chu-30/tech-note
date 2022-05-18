@@ -39,8 +39,6 @@
 
 下列是客製化 pipe 的用法
 
-
-
 ```tsx
 import { Pipe, PipeTransform } from '@angular/core';
 
