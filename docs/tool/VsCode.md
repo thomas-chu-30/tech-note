@@ -6,3 +6,9 @@
 
 [Tabnine AI Autocomplete ](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode)
 
+## Auto Import
+
+自動幫你把 import 的 code 作一個排序
+
+[Auto Import](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport)
+
