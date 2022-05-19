@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktech_note=self.webpackChunktech_note||[]).push([[8894],{8894:function(e,t,c){c.r(t)}}]);
