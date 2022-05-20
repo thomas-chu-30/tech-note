@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktech_note=self.webpackChunktech_note||[]).push([[9744],{5577:function(e){e.exports=JSON.parse('{"allTagsPath":"/tech-note/blog/tags","slug":"/tech-note/blog/tags/\u6392\u7403","name":"\u6392\u7403","count":2,"permalink":"/tech-note/blog/tags/\u6392\u7403"}')}}]);
