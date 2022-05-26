@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: "My Site",
+    title: "Thomas Site",
     tagline: "Dinosaurs are cool",
     url: "https://thomas-chu-30.github.io",
     baseUrl: "/tech-note/",
@@ -24,12 +24,12 @@ const config = {
                 docs: {
                     sidebarPath: require.resolve("./sidebars.js"),
                     // Please change this to your repo.
-                    editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+                    editUrl: "https://github.com/thomas-chu-30/tech-note/tree/master",
                 },
                 blog: {
                     showReadingTime: true,
                     // Please change this to your repo.
-                    editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+                    editUrl: "https://github.com/thomas-chu-30/tech-note/tree/master",
                 },
                 theme: {
                     customCss: require.resolve("./src/css/custom.css"),
@@ -41,8 +41,33 @@ const config = {
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            algolia: {
+                // The application ID provided by Algolia
+                appId: "LGDGXICOJ6",
+
+                // Public API key: it is safe to commit it
+                apiKey: "a973d5195af44d925a8e11f093498232",
+
+                indexName: "tech-note",
+
+                placeholder: "test search",
+
+                // Optional: see doc section below
+                contextualSearch: true,
+
+                // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+                // externalUrlRegex: "external\\.com|domain\\.com",
+
+                // Optional: Algolia search parameters
+                // searchParameters: {},
+
+                // Optional: path for search page that enabled by default (`false` to disable it)
+                // searchPagePath: "search",
+
+                //... other Algolia params
+            },
             navbar: {
-                title: "My Site",
+                title: "Thomas Site",
                 logo: {
                     alt: "My Site Logo",
                     src: "img/logo.svg",
@@ -100,7 +125,7 @@ const config = {
                             },
                             {
                                 label: "GitHub",
-                                href: "https://github.com/facebook/docusaurus",
+                                href: "https://github.com/thomas-chu-30",
                             },
                         ],
                     },
