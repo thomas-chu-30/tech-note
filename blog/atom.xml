@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thomas-chu-30.github.io/tech-note/blog</id>
-    <title>My Site Blog</title>
+    <title>Thomas Site Blog</title>
     <updated>2022-11-21T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thomas-chu-30.github.io/tech-note/blog"/>
-    <subtitle>My Site Blog</subtitle>
+    <subtitle>Thomas Site Blog</subtitle>
     <icon>https://thomas-chu-30.github.io/tech-note/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[我喜歡的排球可能和你不一樣]]></title>
@@ -32,6 +32,14 @@
             <uri>https://www.facebook.com/profile.php?id=100000056080576</uri>
         </author>
         <category label="排球" term="排球"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[created]]></title>
+        <id>/2022/05/22/volleyball/created</id>
+        <link href="https://thomas-chu-30.github.io/tech-note/blog/2022/05/22/volleyball/created"/>
+        <updated>2022-05-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[排球的由來]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_mojV" id="排球的由來">排球的由來<a class="hash-link" href="#排球的由來" title="Direct link to heading">​</a></h2><p>排球的起源：網球與籃球的結合</p><p>排球是由美國人摩根在1895年2月9日發明的。當時，網球、籃球運動在美國非常盛行。但摩根先生認為籃球運動太激烈，很多人參與不了，而網球的運動量又太小，於是他想找一種既有一定的運動量，又具備相當的趣味性，同時還能讓男女老少都加入進來的室內娛樂性項目。</p><p>起初，人們分立在<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E7%90%83" target="_blank" rel="noopener noreferrer">網球</a>場球網的兩側，將排球托來托去，參加人數、擊球次數不限。比賽中網高2.43米（8英尺）。這就是排球的雛形。1896年，在麻省斯普林菲爾德的國際<a href="https://zh.wikipedia.org/wiki/YMCA" target="_blank" rel="noopener noreferrer">YMCA</a>訓練學校（現名<a href="https://zh.wikipedia.org/wiki/%E6%98%A5%E7%94%B0%E5%AD%A6%E9%99%A2" target="_blank" rel="noopener noreferrer">春田學院</a>）舉行了第一場公開比賽。</p><p><img src="https://i3.read01.com/e6EX-517zTy-O6YFveWN_W8/0.jpg"></p><p>神賜下了排球這個個運動，是可以讓男女老少都加入進來一起運動的，但是如果只是為了贏球，而傷害你的隊友，這樣子多麼的不划算，也沒有達到三位賜下這個運動的真正目地喔。</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="學習排球的過程">學習排球的過程<a class="hash-link" href="#學習排球的過程" title="Direct link to heading">​</a></h2><p>以前綀習排球的過程非常的辛苦。大太陽底下都會曬的黑黑的，</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
