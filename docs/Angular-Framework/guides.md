@@ -121,13 +121,13 @@ constructor(userService: UserService) {
 
 那 Angular 是怎麼讓 Component 能夠很便利的使用 Service 呢？
 
-答案是：**DI** *（**D**ependency **I**njection，依賴注入）*`@Injectable`
+答案是：**DI** (**D**ependency **I**njection，依賴注入)  `@Injectable` 
 
 ***第一種 injectable***
 
 使用 `@Injectable` 的話，可以在每一個 component 作引用
 
-```tsx
+```javascript
 @Injectable({
   providedIn: 'root'
 }) // 預設的寫法
@@ -137,7 +137,7 @@ constructor(userService: UserService) {
 
 這種方式是告訴 Angular 說：「請把我註冊在這整個 NgModule 都用同一個實體的注射器裡」。也就是說，假設當初 A Service 是註冊在 A Module 裡，那麼在整個 A Module 裡就會使用同一個實體。
 
-```tsx
+```javascript
 // src/app/app.modules.ts
 @NgModule({
   providers: [
@@ -150,13 +150,17 @@ constructor(userService: UserService) {
 
 註冊在 Component 裡，這種方式是告訴 Angular 說：「請把我註冊在這整個 Component 都用同一個實體的注射器裡」。意思是每個 Component 拿到的 Service 實體都不是同一個。
 
-```tsx
+```javascript
 @Component({
   selector:    'app-hero-list',
   templateUrl: './hero-list.component.html',
   providers:  [ HeroService ]
 })
 ```
+
+## 建議的專案結構
+
+angular 中
 
 ## 繼承
 
@@ -166,7 +170,7 @@ constructor(userService: UserService) {
 
 ~~~~ 這部分還沒有很熟悉 ~~~~~~
 
-```jsx
+
 // app/app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';

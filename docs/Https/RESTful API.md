@@ -80,7 +80,7 @@ Note ⇒ 為了統一起見，建議都使用複數 URL，比如GET /articles/2�
 ```jsx
 1xx：相關信息
 2xx：操作成功
-3xx：重定
+3xx：重定 (redirect)
 4xx：客戶端錯誤
 5xx：服務器錯誤
 ```

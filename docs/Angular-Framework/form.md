@@ -1,29 +1,10 @@
 # Form
 
-## 引用 mat 樣式
-
-```html
-
-<mat-form-field>
-  <mat-label>Input</mat-label>
-  <input matInput>
-</mat-form-field>
-
-<mat-form-field>
-  <mat-label>Select</mat-label>
-  <mat-select>
-    <mat-option value="one">First option</mat-option>
-    <mat-option value="two">Second option</mat-option>
-  </mat-select>
-</mat-form-field>
-
-<mat-form-field>
-  <mat-label>Textarea</mat-label>
-  <textarea matInput></textarea>
-</mat-form-field>
-```
+> *響應式表單*提供了一種模型驅動的方式來處理表單輸入，其中的值會隨時間而變化。本文會向你展示如何建立和更新基本的表單控制元件，接下來還會在一個表單組中使用多個控制元件，驗證表單的值，以及建立動態表單，也就是在執行期新增或移除控制元件。
 
 ## form 表單
+
+這裡的 require 建儀是寫在 formGroup 裡面去作理管，才可方便的在 js 中看到何為必填值。
 
 ```jsx
 <form [formGroup]="subscribeForm" (ngSubmit)="submit()">
@@ -42,7 +23,12 @@
 
 ## invalid function
 
-[https://www.tektutorialshub.com/angular/angular-formbuilder-in-reactive-forms/](https://www.tektutorialshub.com/angular/angular-formbuilder-in-reactive-forms/)
+```
+```
+
+
+
+
 
 ## FormGroup
 
@@ -56,7 +42,9 @@ How do I restrict an input to only accept numbers?
 
 ### Nested FormGroup
 
-```jsx
+form 的表單很大的情況，希望可以有結構化的去管理資料，可以 `nest formGroup` 的方式，方便一目了然的去抓到資料
+
+```javascript
 this.contactForm = this.formBuilder.group({
   firstname: ['', [Validators.required, Validators.minLength(10)]],
   lastname: ['', [Validators.required, Validators.maxLength(15), Validators.pattern("^[a-zA-Z]+$")]],
@@ -73,11 +61,15 @@ this.contactForm = this.formBuilder.group({
 
 ```
 
+[https://www.tektutorialshub.com/angular/angular-formbuilder-in-reactive-forms/](https://www.tektutorialshub.com/angular/angular-formbuilder-in-reactive-forms/)
+
 ## Validations
+
+下列是 angular 在 formGroup 中提供的 validations 的方式，當然也可以自己去寫 customer 的 validation function
 
 [Angular](https://angular.io/api/forms/Validators#compose)
 
-```jsx
+```javascript
 class Validators {
   static min(min: number): ValidatorFn
   static max(max: number): ValidatorFn
@@ -111,9 +103,7 @@ this.fromName.updateValueAndValidity();
 
 [https://www.tektutorialshub.com/angular/how-to-add-validators-dynamically-using-setvalidators-in-angular/](https://www.tektutorialshub.com/angular/how-to-add-validators-dynamically-using-setvalidators-in-angular/)
 
-```jsx
-private destroy$: ReplaySubject<boolean> = new ReplaySubject(1);
-```
+
 
 ### hasError
 
@@ -129,7 +119,7 @@ this.productsForm[index].controls['unit_price'].setErrors({ bottomPrice: true })
 </mat-error>
 ```
 
-清楚不需要 error style 可以把此方法，我原本設用的 error 移除
+清除不需要 error style 可以把此方法，我原本設用的 error 移除
 
 ```javascript
 this.addProductForm.controls['part_no'].setErrors(null);
@@ -143,6 +133,8 @@ const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 ```
 
 ## Reset Reactive Form
+
+有些情況下，submit form 之後，要在清除 form 的資料，可用下列的方式去作 clear 的動作。
 
 ```html
 <form [formGroup]="addProductForm" (ngSubmit)="addProduct()" #formDirective="ngForm">
@@ -159,8 +151,6 @@ export class CorporateQuotationPageComponent implements OnInit {
    }
 }
 ```
-
-
 
 
 
@@ -187,8 +177,6 @@ export class ZipcodeService {
   }
 }
 ```
-
-
 
 ```javascript
 import {ZipcodeService} from './zipcode.service';
