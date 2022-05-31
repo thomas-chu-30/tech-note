@@ -126,3 +126,41 @@ for i in range(1,7):
 for loop (二)
 
 ![](./images/for-loop-2.png)
+
+```python
+for i in range(8):
+  for j in range(8):
+    print(i,j,sep='',end=' ')
+    '''
+    sep -> separate
+    end -> default end='\n'
+    '''
+  print() # print 會有換行的結果
+```
+
+## Chapter-12
+
+while loop & random
+
+```python
+n = int(input('enter number:'))
+i=1
+while i<=n:
+  print('@'*i)
+  i += 1
+```
+
+```python
+import random
+number = int(input('enter password number (0~9):'))
+
+pwd = random.randint(0,9)
+print(pwd)
+
+while pwd != number:
+  number = int(input('input pwd again (0~9):'))
+  print(pwd,number)
+print('successfully !!!')
+
+```
+
