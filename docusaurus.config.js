@@ -28,6 +28,7 @@ const config = {
                 },
                 blog: {
                     showReadingTime: true,
+                    blogSidebarCount: 'ALL',
                     // Please change this to your repo.
                     editUrl: "https://github.com/thomas-chu-30/tech-note/tree/master",
                 },
