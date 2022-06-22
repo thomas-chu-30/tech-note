@@ -1,3 +1,7 @@
+---
+tags: [angular]
+---
+
 # Form
 
 > *響應式表單*提供了一種模型驅動的方式來處理表單輸入，其中的值會隨時間而變化。本文會向你展示如何建立和更新基本的表單控制元件，接下來還會在一個表單組中使用多個控制元件，驗證表單的值，以及建立動態表單，也就是在執行期新增或移除控制元件。
@@ -21,12 +25,15 @@
 </form>
 ```
 
+
+
 ## invalid function
 
-```
-```
+透過下列這段 checked form 是否有尚未寫好的值。
 
-
+```javascript
+this.formName.invalid
+```
 
 
 
@@ -85,18 +92,35 @@ class Validators {
 }
 ```
 
+### disable enable
+
+把你要輸入的欄位 disable 和 enable
+
+```javascript
+this.fromName.controls['control'].disable()
+this.fromName.controls['control'].enable()
+```
 
 ### updateValidations
 
 ```javascript
-this.fromName.get("formControlName").setValidators([Validators.required]);
+this.formName.get("formControlName").setValidators([Validators.required]);
 //setting validations
-this.fromName.get("formControlName").setErrors({'required':true});
+this.formName.get("formControlName").setErrors({'required':true});
+this.formName.get("formControlName").setErrors(null) // 清除 errors 的方法
 //error message
 this.myForm.controls['controlName'].clearValidators()
 //clear valiations
 this.fromName.updateValueAndValidity();
 //update validation
+
+
+```
+
+**NOTE** 如果是在另一個 component 中要去 control 另一個 form 給它 setErrors 的話可以加上面這一段，這樣子才可以正常的設定 error
+
+```javascript
+this.formName.markAsTouched({ onlySelf: true });
 ```
 
 [Angular reactive forms set and clear validators](https://stackoverflow.com/questions/51300628/angular-reactive-forms-set-and-clear-validators)
@@ -156,7 +180,19 @@ export class CorporateQuotationPageComponent implements OnInit {
 
 ## ValueChange
 
-[value change](https://www.tektutorialshub.com/angular/valuechanges-in-angular-forms/)
+```javascript
+this.formName.controls['control'].setValue(data);
+```
+
+### EmitEvent & ValueChanges
+
+coming soon ...
+
+### OnlySelf & ValueChanges
+
+coming soon ...
+
+[value change 參考文章](https://www.tektutorialshub.com/angular/valuechanges-in-angular-forms/)
 
 ## Custom Async Validators
 
@@ -226,3 +262,6 @@ export class AsyncValidatorDemoComponent implements OnInit {
 ```
 
 [Angular: Custom Async Validators](https://medium.com/@rinciarijoc/angular-custom-async-validators-13a648d688d8)
+
+
+

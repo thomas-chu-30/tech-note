@@ -1,3 +1,7 @@
+---
+tags: [angular]
+---
+
 # Resolver
 
 router 轉址後會先經過 resolver 在去到另一個 router ，因此可先在此取得資料，到新頁面時就可直接賦予值

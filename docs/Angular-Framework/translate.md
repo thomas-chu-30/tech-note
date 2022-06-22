@@ -1,3 +1,8 @@
+---
+tags: [angular]
+title: i18n
+---
+
 # **i18n tranlate**
 
 ## template 引用 i18n

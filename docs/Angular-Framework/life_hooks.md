@@ -1,4 +1,6 @@
-
+---
+tags: [angular]
+---
 
 # Life Hooks 
 

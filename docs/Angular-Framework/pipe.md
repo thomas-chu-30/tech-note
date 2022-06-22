@@ -1,3 +1,7 @@
+---
+tags: [angular]
+---
+
 # Pipe
 
 > angular 原生的 number 需要特別去看一下

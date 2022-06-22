@@ -1,3 +1,7 @@
+---
+tags: [angular]
+---
+
 # Server Side Render
 
 首先把你的專案改為 ssr 

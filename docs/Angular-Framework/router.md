@@ -1,3 +1,7 @@
+---
+tags: [angular]
+---
+
 # Router
 
 ## **Angular 路由**

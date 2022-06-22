@@ -225,7 +225,7 @@ git fetch
 
 ### pull
 
-那 pull 的這個動作，就是我們把 fetch + merge 的動作一起作完，把 code 拉下來，然後 merge 到你現在的 br 中
+那 pull 的這個動作，就是我們把 fetch + merge 的動作一起作完，把 code 拉下來，然後 merge 到你現在的 branch 中
 
 ```shell
 # git fetch + git merge
@@ -234,6 +234,14 @@ git pull
 # 當然你也可選擇 rebase
 git pull --rebase
 ```
+
+**NOTE** 在開發過程中如果你遇到需要設定 config 你可能會看到這個畫面
+
+```shell
+# bla... bla...
+```
+
+
 
 ### push
 
@@ -357,6 +365,8 @@ git clean -fd
 
 
 ## 參考文章
+
+[Git 環境設定 小技巧](https://clouding.city/git/tips/)
 
 [搬移檔案](https://zlargon.gitbooks.io/git-tutorial/content/file/move.html)
 

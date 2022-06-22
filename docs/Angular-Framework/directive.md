@@ -1,3 +1,7 @@
+---
+tags: [angular]
+---
+
 # Directive
 
 ## Commom (11)
