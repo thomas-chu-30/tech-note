@@ -103,17 +103,21 @@ this.fromName.controls['control'].enable()
 
 ### updateValidations
 
+setErrors 如果是 null 的情況下，會把原本的 required 的設定也都拿掉，所以要特別小心
+
 ```javascript
 this.formName.get("formControlName").setValidators([Validators.required]);
 //setting validations
 this.formName.get("formControlName").setErrors({'required':true});
+this.formName.get("formControlName").setErrors({'required':false}); // 會有 error 的style 不會有 msg 
 this.formName.get("formControlName").setErrors(null) // 清除 errors 的方法
 //error message
 this.myForm.controls['controlName'].clearValidators()
 //clear valiations
-this.fromName.updateValueAndValidity();
+this.formName.updateValueAndValidity();
 //update validation
-
+this.formName.controls.reset()
+// 把 form 表中的資料回復到最一開始的樣子
 
 ```
 
@@ -176,7 +180,7 @@ export class CorporateQuotationPageComponent implements OnInit {
 }
 ```
 
-
+**reset() vsj resetForm() ？？**
 
 ## ValueChange
 

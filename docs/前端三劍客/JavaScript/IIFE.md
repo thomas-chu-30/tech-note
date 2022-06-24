@@ -1,4 +1,4 @@
-# **IIFE**
+# IIFE
 
 > IIFE (Immediately Invoked Function Expression) 是一個定義完馬上就執行的 JavaScript function (en-US)。使用Grouping Operator (en-US) () 包起來的 anonymous function。這樣的寫法可以避免裡面的變數污染到 global scope。
 

@@ -22,15 +22,15 @@
 
 ## For Angular 
 
-#### Angular Extension Pack`v13.1.0`
+### Angular Extension Pack`v13.1.0`
 
 `Will 保哥` 的組合包，下載就對了
 
-#### Angular 10 Snippets - TypeScript, Html, Angular
+### Angular 10 Snippets - TypeScript, Html, Angular
 
 在寫 code 的過程中，會自動的加一些 prefix 之類的
 
-#### Angular Files
+### Angular Files
 
 可以直接在 folder 上 add component, pipe, derective ...
 

@@ -1,4 +1,4 @@
-# Customized Pipe
+# Customized Pipe for RxJs
 
 下列所遇到的情境是 url 的 queryString 重複的情況，所造成的 bug ，所以希望在 subscribed 的 pipe 把 queryString 展平。
 

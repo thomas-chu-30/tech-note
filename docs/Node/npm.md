@@ -1,3 +1,7 @@
+---
+tags: [node, npm]
+---
+
 # NPM 你必需知道的事情
 
 ## package install

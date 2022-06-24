@@ -1,4 +1,4 @@
-# **Get DOM Element**
+# Get DOM Element
 
 ##	getElementById
 
