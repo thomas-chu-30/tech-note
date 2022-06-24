@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktech_note=self.webpackChunktech_note||[]).push([[4121],{8070:function(e){e.exports=JSON.parse('[{"label":"angular","permalink":"/tech-note/docs/tags/angular","count":11}]')}}]);
