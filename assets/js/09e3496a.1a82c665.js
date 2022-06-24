@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktech_note=self.webpackChunktech_note||[]).push([[3888],{233:function(e){e.exports=JSON.parse('{"permalink":"/tech-note/blog/tags/\u6392\u7403","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
