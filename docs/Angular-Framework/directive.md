@@ -54,16 +54,52 @@ tags: [angular]
 
 ## ngIf
 
+> ngIf 會直接看 DOM 不見，而 `[hidden]` 的這個寫法只會讓 dom 看不見
+
 ```html
 <div *ngIf="false">test</div>
-
-[style.display]="!isLoading ? 'block' : 'none'"
+<div [hidden]="true">
+<!- [style.display]="!isLoading ? 'block' : 'none'" ->
 ```
 
 ## [(ngModel)]
 
 > 一定要引用 `import { FormsModule } from '@angular/forms';` > `imports: [FormsModule]`
 > 不然會沒有辦法使用
+
+有三種寫法都可以達到雙向綁定的效果
+
+### 綁定方法1
+
+使用 `[()]` 的寫法
+
+```html
+<input [(ngModel)]="username">
+
+<p>Hello {{username}}!</p>
+```
+
+### 綁定方法2
+
+將 `[]` `()` 分開寫
+
+```html
+<input [ngModel]="username" (ngModelChange)="username = $event">
+
+<p>Hello {{username}}!</p>
+```
+
+### 綁定方法3
+
+不使用 `ngModel`
+
+```html
+<input [value]="username" (input)="username = $event.target.value">
+
+<p>Hello {{username}}!</p>
+```
+
+[ngMode 底層說明l](https://blog.kevinyang.net/2017/08/14/angular-two-way-binding/)
 
 [[Angular 深入淺出三十天] Day 09 - Angular 小學堂（二） - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10205162)
 

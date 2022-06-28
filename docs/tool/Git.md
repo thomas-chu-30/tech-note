@@ -123,6 +123,12 @@ git reset --soft `<id>^`
 > commit 訊息邏輯以大寫開頭以<動詞> + <受詞> + <內容> 的文法撰寫內容不宜過長內容需要據有代表性
 > 
 
+如要編輯 head 的 commit 的話
+
+```shell
+git commit --amend
+```
+
 
 
 ## stash
