@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "build-deploy":"docusaurus build && USE_SSH=true npm run deploy",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
