@@ -83,7 +83,7 @@
 
 
 
-<iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_1" scrolling="no" src="https://codepen.io/eyesofkids/embed/vXBOAA/?height=300&amp;theme-id=0&amp;slug-hash=vXBOAA%2F&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_1" title="CodePen Embed" loading="lazy" id="cp_embed_vXBOAA_" style="box-sizing: border-box; -webkit-tap-highlight-color: transparent; text-size-adjust: none; -webkit-font-smoothing: antialiased; font-size: inherit; width: 770px; overflow: hidden; display: block;"></iframe>
+
 
 
 
@@ -145,7 +145,6 @@ border-radius: 50%;
 
 
 
-<iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_2" scrolling="no" src="https://codepen.io/eyesofkids/embed/JRPdXb/?height=300&amp;theme-id=0&amp;slug-hash=JRPdXb%2F&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_2" title="CodePen Embed" loading="lazy" id="cp_embed_JRPdXb_" style="box-sizing: border-box; -webkit-tap-highlight-color: transparent; text-size-adjust: none; -webkit-font-smoothing: antialiased; font-size: inherit; width: 770px; overflow: hidden; display: block;"></iframe>
 
 
 
@@ -153,7 +152,7 @@ border-radius: 50%;
 
 
 
-<iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_3" scrolling="no" src="https://codepen.io/eyesofkids/embed/kkNWmL?height=300&amp;theme-id=0&amp;slug-hash=kkNWmL&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_3" title="CodePen Embed" loading="lazy" id="cp_embed_kkNWmL" style="box-sizing: border-box; -webkit-tap-highlight-color: transparent; text-size-adjust: none; -webkit-font-smoothing: antialiased; font-size: inherit; width: 770px; overflow: hidden; display: block;"></iframe>
+
 
 
 
@@ -184,10 +183,10 @@ animation: 動畫名稱 播放時間 速度函式 延遲播放時間 次數 方�
 
 /* 細項全名 */
 animation-name: my-animation; /* 動畫名稱，可以用逗號套用多個 @keyframes */
-animation-duration: 1s;    /* 播放時間 */ 
-animation-timing-function: linear | ease-in-out;  /* 速度函式 */ 
-animation-delay: 0.5s;  /* 延遲多久開始執行 */ 
-animation-iteration-count: infinite | number;    /* 播放次數 */ 
+animation-duration: 1s;    /* 播放時間 */
+animation-timing-function: linear | ease-in-out;  /* 速度函式 */
+animation-delay: 0.5s;  /* 延遲多久開始執行 */
+animation-iteration-count: infinite | number;    /* 播放次數 */
 animation-direction: normal | alternate (來回播放) |
                       reverse（從 100% 跑回 0 %） | alternate-reverse;   // 方向
 animation-fill-mode: none | forwards | backwards | both;   // 填充模式，動畫執行前後，目標如何套用 CSS Animation
@@ -252,7 +251,7 @@ animation-play-state: paused | running;    // 定義動畫執行或停止
 
 
 
-<iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_1" scrolling="no" src="https://codepen.io/eyesofkids/embed/JRPGqX/?height=300&amp;theme-id=0&amp;slug-hash=JRPGqX%2F&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_1" title="CodePen Embed" loading="lazy" id="cp_embed_JRPGqX_" style="box-sizing: border-box; -webkit-tap-highlight-color: transparent; text-size-adjust: none; -webkit-font-smoothing: antialiased; font-size: inherit; width: 770px; overflow: hidden; display: block;"></iframe>
+
 
 
 
@@ -271,7 +270,7 @@ animation-play-state: paused | running;    // 定義動畫執行或停止
 
 
 
-<iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_2" scrolling="no" src="https://codepen.io/eyesofkids/embed/BLBKKO/?height=300&amp;theme-id=0&amp;slug-hash=BLBKKO%2F&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_2" title="CodePen Embed" loading="lazy" id="cp_embed_BLBKKO_" style="box-sizing: border-box; -webkit-tap-highlight-color: transparent; text-size-adjust: none; -webkit-font-smoothing: antialiased; font-size: inherit; width: 770px; overflow: hidden; display: block;"></iframe>
+
 
 
 
@@ -281,7 +280,7 @@ animation-play-state: paused | running;    // 定義動畫執行或停止
 
 
 
-<iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_3" scrolling="no" src="https://codepen.io/eyesofkids/embed/GjKkWd/?height=300&amp;theme-id=0&amp;slug-hash=GjKkWd%2F&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_3" title="CodePen Embed" loading="lazy" id="cp_embed_GjKkWd_" style="box-sizing: border-box; -webkit-tap-highlight-color: transparent; text-size-adjust: none; -webkit-font-smoothing: antialiased; font-size: inherit; width: 770px; overflow: hidden; display: block;"></iframe>
+
 
 
 
@@ -291,7 +290,7 @@ animation-play-state: paused | running;    // 定義動畫執行或停止
 
 
 
-<iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_4" scrolling="no" src="https://codepen.io/eyesofkids/embed/kkNbGr/?height=300&amp;theme-id=0&amp;slug-hash=kkNbGr%2F&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_4" title="CodePen Embed" loading="lazy" id="cp_embed_kkNbGr_" style="box-sizing: border-box; -webkit-tap-highlight-color: transparent; text-size-adjust: none; -webkit-font-smoothing: antialiased; font-size: inherit; width: 770px; overflow: hidden; display: block;"></iframe>
+
 
 
 
@@ -340,9 +339,8 @@ animation-play-state: running
 
 
 
-<iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_5" scrolling="no" src="https://codepen.io/eyesofkids/embed/JRPXBy/?height=300&amp;theme-id=0&amp;slug-hash=JRPXBy%2F&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_5" title="CodePen Embed" loading="lazy" id="cp_embed_JRPXBy_" style="box-sizing: border-box; -webkit-tap-highlight-color: transparent; text-size-adjust: none; -webkit-font-smoothing: antialiased; font-size: inherit; width: 770px; overflow: hidden; display: block;"></iframe>
+
 
 
 
 [參考文章](https://eyesofkids.gitbooks.io/css3/content/contents/intro.html)
-
