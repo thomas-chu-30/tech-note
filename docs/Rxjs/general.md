@@ -138,3 +138,17 @@ this.http.get(postApiUrl).pipe(
 [參考文章](https://medium.com/allen%E7%9A%84%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98/rxjs-mergemap-%E7%AD%86%E8%A8%98-b971778cbff4)
 
 ### 
+
+
+
+
+
+## tap
+
+https://rxjs.dev/api/operators/tap
+
+
+
+## finalize
+
+https://rxjs.dev/api/operators/finalize

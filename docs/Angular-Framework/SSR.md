@@ -39,3 +39,6 @@ npm run dev:ssr
 ## 解決 ssr 畫面閃爍問題(重要)
 
 [[Angular Universal] 使用 TransferState 解決畫面閃爍問題 | 全端開發人員天梯](https://fullstackladder.dev/blog/2021/10/31/angular-universal-transfer-state/)
+
+
+
