@@ -74,9 +74,6 @@
 
 轉場特效使用四個 CSS 屬性來進行定義，這些屬性可以整個合併到一個`transition`屬性之中:
 
-<<<<<<< Updated upstream
-
-=======
 -   **transition-property**: 定義哪些 CSS 屬性會被轉場效果影響。除了這些被指定的屬性，其他的轉場一如以往的會在瞬間完成。要特別注意的是，並非所有的 CSS 屬性都可以進行轉場，可用的屬性所有清單在[這份資料](http://oli.jp/2010/css-animatable-properties/)與[可進行動畫屬性](https://www.w3.org/TR/2009/WD-css3-transitions-20091201/#animatable-properties-)，其中也包含了 SVG 的屬性。如果這個屬性定義為`transform`，代表任何使用了`transform`的屬性都會被偵測來進行動畫。如果這個屬性定義為`all`，就會自動偵測所有可進行動畫的屬性，包含`transform`影響的屬性。預設值就是`all`。
 -   **transition-duration**: 定義轉場的持續時間。可以只定義一個時間給所有屬性使用，也可以分別給定不同時間。時間通常以`s`為單位(秒)，可以定義小數點例如`0.5s`或`.5s`，預設值是`0s`。
 -   **transition-timing-function**: 時間函式，這是用來設定轉場過程時所使用的貝茲曲線。內建的幾個可直接使用數值如下，直接使用名稱就可以取用。在[這個頁面](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)中看到所有的預設值的範例:
@@ -89,7 +86,6 @@
     -   step-end
     -   steps()
     -   cubic-bezier()
->>>>>>> Stashed changes
 
 其中`cubic-bezier()`的數值，可以到[cubic-bezier.com](http://cubic-bezier.com/)來自訂所需要的貝茲曲線參數值，或是到這一頁[Easing 函數](http://easings.net/zh-tw)或[CSS EASING ANIMATION TOOL](https://matthewlein.com/ceaser/)的裡面挑選你想要的 Easing 函數，使用四個數字值可以產生一個貝茲曲線。預設值是`ease`。
 
@@ -130,30 +126,13 @@ transition: all .5s ease;
 }
 ```
 
-<<<<<<< Updated upstream
-以下為這個範例的執行結果，你可以把滑鼠游標放在上面久一點，因為第二個屬性(圓角邊)會在1s後才延遲開始。
-
-
-
-
-
-
-轉場特效的概念十分簡單，開始狀態、結束狀態，以及持續時間、轉場使用的貝茲曲線函式。對滑鼠滑入(hover)來說，`.box`是開始狀態，而`.box:hover`是結束狀態。但當滑鼠游標離開時，就會兩個顛倒過來。那到底`transition`該加在`.box`中還是`.box:hover`中？大部份的情況是只需要加在`.box`中，除非你希望滑鼠游標移入與離開是兩種不同的轉場特效情況，不過你需要把所有的屬性都對應好，不然會產生立即執行的失效情況。如果你只加在:hover中大概是錯誤的寫法。以下為範例:
-
-=======
 以下為這個範例的執行結果，你可以把滑鼠游標放在上面久一點，因為第二個屬性(圓角邊)會在 1s 後才延遲開始。
->>>>>>> Stashed changes
 
 <div>
 <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_2" scrolling="no" src="https://codepen.io/eyesofkids/embed/JRPdXb/?height=300&amp;theme-id=0&amp;slug-hash=JRPdXb%2F&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_2" title="CodePen Embed" loading="lazy" id="cp_embed_JRPdXb_"></iframe>
 </div>
 
-<<<<<<< Updated upstream
-
-
-=======
 轉場特效的概念十分簡單，開始狀態、結束狀態，以及持續時間、轉場使用的貝茲曲線函式。對滑鼠滑入(hover)來說，`.box`是開始狀態，而`.box:hover`是結束狀態。但當滑鼠游標離開時，就會兩個顛倒過來。那到底`transition`該加在`.box`中還是`.box:hover`中？大部份的情況是只需要加在`.box`中，除非你希望滑鼠游標移入與離開是兩種不同的轉場特效情況，不過你需要把所有的屬性都對應好，不然會產生立即執行的失效情況。如果你只加在:hover 中大概是錯誤的寫法。以下為範例:
->>>>>>> Stashed changes
 
 <div>
 <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_3" scrolling="no" src="https://codepen.io/eyesofkids/embed/kkNWmL?height=300&amp;theme-id=0&amp;slug-hash=kkNWmL&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_3" title="CodePen Embed" loading="lazy" id="cp_embed_kkNWmL"></iframe>
@@ -251,17 +230,9 @@ animation-delay: 1s;
 
 下面是這個範例的執行結果，它是一載入頁面立即執行的，如果看不到請重新載入範例的頁面。這是動畫的特性，不過也有另外可以讓它用類似轉場的觸發方式來執行，後面會再提到。
 
-<<<<<<< Updated upstream
-
-
-
-
-
-=======
 <div>
 <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_1" scrolling="no" src="https://codepen.io/eyesofkids/embed/JRPGqX/?height=300&amp;theme-id=0&amp;slug-hash=JRPGqX%2F&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_1" title="CodePen Embed" loading="lazy" id="cp_embed_JRPGqX_" ></iframe>
 </div>
->>>>>>> Stashed changes
 
 ### 其他更多的屬性
 
@@ -280,16 +251,7 @@ animation-delay: 1s;
 <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_2" scrolling="no" src="https://codepen.io/eyesofkids/embed/BLBKKO/?height=300&amp;theme-id=0&amp;slug-hash=BLBKKO%2F&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_2" title="CodePen Embed" loading="lazy" id="cp_embed_BLBKKO_"></iframe>
 </div>
 
-<<<<<<< Updated upstream
-
-
-
-
-
-- `animation-fill-mode`(播放後樣式): 指的是動畫播放後的樣式，是不是要保留在最後的狀態。預設值是`none`，設定為`forwards`會停留在最後的樣式，`backwards`則是一開始的樣式。`both`是兩者都套用。這個值會因為`animation-direction`屬性的方向值而有不同的套用對象。
-=======
 -   `animation-fill-mode`(播放後樣式): 指的是動畫播放後的樣式，是不是要保留在最後的狀態。預設值是`none`，設定為`forwards`會停留在最後的樣式，`backwards`則是一開始的樣式。`both`是兩者都套用。這個值會因為`animation-direction`屬性的方向值而有不同的套用對象。
->>>>>>> Stashed changes
 
 下面的範例是使用`forwards`來指定，最後會停留在最後套用的樣式。
 
@@ -297,22 +259,6 @@ animation-delay: 1s;
 <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_3" scrolling="no" src="https://codepen.io/eyesofkids/embed/GjKkWd/?height=300&amp;theme-id=0&amp;slug-hash=GjKkWd%2F&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_3" title="CodePen Embed" loading="lazy" id="cp_embed_GjKkWd_"></iframe>
 </div>
 
-<<<<<<< Updated upstream
-
-
-
-
-
-- `animation-play-state`(播放狀態): 這個屬性可以控制動畫播放的暫停，預設是`running`，可以設為`paused`來暫停播放。
-
-下面的範例是使用`:hover`加上`paused`，滑鼠游標放在球上面，動畫就會暫停，游標移出後又會繼續。
-
-
-
-
-
-
-=======
 -   `animation-play-state`(播放狀態): 這個屬性可以控制動畫播放的暫停，預設是`running`，可以設為`paused`來暫停播放。
 
 下面的範例是使用`:hover`加上`paused`，滑鼠游標放在球上面，動畫就會暫停，游標移出後又會繼續。
@@ -320,7 +266,6 @@ animation-delay: 1s;
 <div>
 <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_4" scrolling="no" src="https://codepen.io/eyesofkids/embed/kkNbGr/?height=300&amp;theme-id=0&amp;slug-hash=kkNbGr%2F&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_4" title="CodePen Embed" loading="lazy" id="cp_embed_kkNbGr_"></iframe>
 </div>
->>>>>>> Stashed changes
 
 ### 簡寫語法(整合語法)
 
@@ -363,22 +308,10 @@ animation: 3s slidein;
 
 ### 使用`:hover`來觸發動畫
 
-<<<<<<< Updated upstream
-下面的範例可以用一個外圍的div元素來框住進行CSS3動畫的球元素，讓它在滑鼠游標移入在上面時才開始進行動畫，按住滑鼠左鍵時可以暫停動畫。但你應該發現不論如何，使用CSS3動畫是無法在播放期間直接中止的。
-
-
-
-
-=======
 下面的範例可以用一個外圍的 div 元素來框住進行 CSS3 動畫的球元素，讓它在滑鼠游標移入在上面時才開始進行動畫，按住滑鼠左鍵時可以暫停動畫。但你應該發現不論如何，使用 CSS3 動畫是無法在播放期間直接中止的。
->>>>>>> Stashed changes
 
 <div>
 <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_5" scrolling="no" src="https://codepen.io/eyesofkids/embed/JRPXBy/?height=300&amp;theme-id=0&amp;slug-hash=JRPXBy%2F&amp;default-tab=result&amp;user=eyesofkids&amp;name=cp_embed_5" title="CodePen Embed" loading="lazy" id="cp_embed_JRPXBy_"></iframe>
 </div>
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 [參考文章](https://eyesofkids.gitbooks.io/css3/content/contents/intro.html)
