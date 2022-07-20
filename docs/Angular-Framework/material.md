@@ -75,10 +75,6 @@ export class DatepickerEventsExample {
 
 
 
-## 
-
-
-
 ## customer svg icon
 
 ```javascript

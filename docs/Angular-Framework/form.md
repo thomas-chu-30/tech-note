@@ -29,10 +29,25 @@ tags: [angular]
 
 ## invalid function
 
-透過下列這段 checked form 是否有尚未寫好的值。
+透過下列這段 checked form 是否有尚未寫好的值，或是沒有通過的 validations。
 
 ```javascript
 this.formName.invalid
+```
+
+### disable enable
+
+可把欄位 disable 和 enable，但是特別注意 `disable()` 的值，如果直接用 `this.form.value` 會拿不到值
+
+```javascript
+this.formName.controls['control'].disable()
+this.formName.controls['control'].enable()
+```
+
+如果想要拿到 `disable()` 的值，需要用 `getRawValue()` 來取得到已被 `disable()` 的值 
+
+```javascript
+this.formName.getRawValue();
 ```
 
 
@@ -70,6 +85,8 @@ this.contactForm = this.formBuilder.group({
 
 [https://www.tektutorialshub.com/angular/angular-formbuilder-in-reactive-forms/](https://www.tektutorialshub.com/angular/angular-formbuilder-in-reactive-forms/)
 
+
+
 ## Validations
 
 下列是 angular 在 formGroup 中提供的 validations 的方式，當然也可以自己去寫 customer 的 validation function
@@ -90,15 +107,6 @@ class Validators {
   static compose(validators: ValidatorFn[]): ValidatorFn | null
   static composeAsync(validators: AsyncValidatorFn[]): AsyncValidatorFn | null
 }
-```
-
-### disable enable
-
-把你要輸入的欄位 disable 和 enable
-
-```javascript
-this.fromName.controls['control'].disable()
-this.fromName.controls['control'].enable()
 ```
 
 ### updateValidations
@@ -160,45 +168,13 @@ const pattern = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}/;
 const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 ```
 
-## Reset Reactive Form
+### Custom & Async Validators
 
-有些情況下，submit form 之後，要在清除 form 的資料，可用下列的方式去作 clear 的動作。
+#### Custom Validators
 
-```html
-<form [formGroup]="addProductForm" (ngSubmit)="addProduct()" #formDirective="ngForm">
-	...
-</form>
-```
 
-```javascript
-export class CorporateQuotationPageComponent implements OnInit {
-   @ViewChild('formDirective') formDirective;
-	 ...
-   resetForm() {
-  		this.formDirective.resetForm(); //重新的把值清空
-   }
-}
-```
 
-**reset() vsj resetForm() ？？**
-
-## ValueChange
-
-```javascript
-this.formName.controls['control'].setValue(data);
-```
-
-### EmitEvent & ValueChanges
-
-coming soon ...
-
-### OnlySelf & ValueChanges
-
-coming soon ...
-
-[value change 參考文章](https://www.tektutorialshub.com/angular/valuechanges-in-angular-forms/)
-
-## Custom Async Validators
+#### Custom Async Validators
 
 ```javascript
 import { Injectable } from '@angular/core';
@@ -266,6 +242,52 @@ export class AsyncValidatorDemoComponent implements OnInit {
 ```
 
 [Angular: Custom Async Validators](https://medium.com/@rinciarijoc/angular-custom-async-validators-13a648d688d8)
+
+
+
+### cross reative form
+
+https://offering.solutions/blog/articles/2020/05/03/cross-field-validation-using-angular-reactive-forms/#adding-custom-validators-to-a-single-form-control
+
+
+
+## Reset Reactive Form
+
+有些情況下，submit form 之後，要在清除 form 的資料，可用下列的方式去作 clear 的動作。
+
+```html
+<form [formGroup]="addProductForm" (ngSubmit)="addProduct()" #formDirective="ngForm">
+	...
+</form>
+```
+
+```javascript
+export class CorporateQuotationPageComponent implements OnInit {
+   @ViewChild('formDirective') formDirective;
+	 ...
+   resetForm() {
+  		this.formDirective.resetForm(); //重新的把值清空
+   }
+}
+```
+
+**reset() vsj resetForm() ？？**
+
+## ValueChange
+
+```javascript
+this.formName.controls['control'].setValue(data);
+```
+
+### EmitEvent & ValueChanges
+
+coming soon ...
+
+### OnlySelf & ValueChanges
+
+coming soon ...
+
+[value change 參考文章](https://www.tektutorialshub.com/angular/valuechanges-in-angular-forms/)
 
 
 

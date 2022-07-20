@@ -2,10 +2,7 @@
 tags: [angular]
 ---
 
-# Life Hooks 
-
-## 生命週期
-
+## Life Hooks (生命週期)
 
 ![Life%20Hooks%208fbaa02f1ad44ff3b76564995fcd6b7a/_2021-07-21_1.34.35.png](https://ik.imagekit.io/14v7jwku5tz/Blogger/Docusaurus/_2021-07-21_1.39.40_g3w-n1T7hS9.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644802618366)
 
@@ -15,15 +12,16 @@ tags: [angular]
 
 ### constructor
 
-初始話一些參數
+1. 初始化一些參數
+2. 放外部的 `service` 引入
 
 ### ngOnInit
 
-一些api請求
+畫面在一開始進來的時候會執行過一次，建議在此處放 subscribe 的 function，作一些 `api` 請求動作
 
 ### ngOnChanges
 
-輸入屬性的值發生改變
+當 `@Input()` 的值變化的時候，此處的就會在發生變化，執行 JS
 
 ### ngDoCheck
 
@@ -44,7 +42,7 @@ ViewChild與ViewChildren初始化之後調用，只調用一次
 
 ### ngOnDestroy
 
-去除訂閱，銷毀事件
+去除 `subscribe`，銷毀事件
 
 ------
 
@@ -70,7 +68,24 @@ ViewChild與ViewChildren初始化之後調用，只調用一次
 6. AfterContentChecked
 7. AfterViewChecked
 
-## 參考資料
+
+
+## Angular vs Vue
+
+
+| 不同點         | Angualar                                                  | Vue                                    |
+| -------------- | --------------------------------------------------------- | -------------------------------------- |
+| 屬性, 方法獲得 | 任何生命週期都可以                                        | 除了 beforeCreate 生命周期，其它都可以 |
+| dom 節點獲取   | 只能透過 ngDoCheck (包括 ngAfterView, ngAgteContentCheck) | Mounted 生命週期後的皆可以             |
+| ngDoCheck      | 檢測頁面上的任何變動                                      | Vue 沒有類似的東西                     |
+|                |                                                           |                                        |
+|                |                                                           |                                        |
+|                |                                                           |                                        |
+|                |                                                           |                                        |
+
+**NOTE** [angular]ngOnChange 同 [vue]update，[angular]ngOnDestory 同 [vue]destory
+
+**參考資料**
 
 [Angular生命周期](https://zhuanlan.zhihu.com/p/96509858)
 
